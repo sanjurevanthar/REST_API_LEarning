@@ -1,0 +1,507 @@
+{
+  "name": "CricketBat API",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "Add Cricket Bat - Local",
+      "filename": "Add Cricket Bat - Local.bru",
+      "seq": 1,
+      "request": {
+        "url": "http://localhost:8080/bats",
+        "method": "POST",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/json",
+            "enabled": true
+          }
+        ],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"brand\": \"Kookaburra\",\n  \"style\": \"Pro\",\n  \"name\": \"Kookaburra Kahuna\",\n  \"price\": 4800,\n  \"reviews\": [\"Lightweight\", \"Great pickup\"]\n}\n",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Base Url Test",
+      "filename": "Base Url Test.bru",
+      "seq": 2,
+      "request": {
+        "url": "http://localhost:8080/bats",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Get By Brand",
+      "filename": "Get By Brand.bru",
+      "seq": 4,
+      "request": {
+        "url": "http://localhost:8080/bats/brand/Kookaburra Kahuna",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Get by Bat Style",
+      "filename": "Get by Bat Style.bru",
+      "seq": 5,
+      "request": {
+        "url": "http://localhost:8080/bats/style/{style}",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Search Bats by keyword",
+      "filename": "Search Bats by keyword.bru",
+      "seq": 6,
+      "request": {
+        "url": "http://localhost:8080/bats/search?keyword={name}",
+        "method": "GET",
+        "headers": [],
+        "params": [
+          {
+            "name": "keyword",
+            "value": "{name}",
+            "type": "query",
+            "enabled": true
+          }
+        ],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Get affordable Bat by Brand",
+      "filename": "Get affordable Bat by Brand.bru",
+      "seq": 7,
+      "request": {
+        "url": "http://localhost:8080/bats/affordable?brand={brand}&price={maxPrice}",
+        "method": "GET",
+        "headers": [],
+        "params": [
+          {
+            "name": "brand",
+            "value": "{brand}",
+            "type": "query",
+            "enabled": true
+          },
+          {
+            "name": "price",
+            "value": "{maxPrice}",
+            "type": "query",
+            "enabled": true
+          }
+        ],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Delete Bat from Db",
+      "filename": "Delete Bat from Db.bru",
+      "seq": 8,
+      "request": {
+        "url": "http://localhost:8080/bats/{id}",
+        "method": "DELETE",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Update data",
+      "filename": "Update data.bru",
+      "seq": 9,
+      "request": {
+        "url": "http://localhost:8080/bats/{id}",
+        "method": "PUT",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "folder",
+      "name": "Render-URl",
+      "filename": "Render-URl",
+      "root": {
+        "meta": {
+          "name": "Render-URl"
+        }
+      },
+      "items": [
+        {
+          "type": "http",
+          "name": "Base Url - Rendered",
+          "filename": "Base Url - Rendered.bru",
+          "seq": 1,
+          "request": {
+            "url": "https://rest-api-learning-1.onrender.com",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Add Cricket bats",
+          "filename": "Add Cricket bats.bru",
+          "seq": 2,
+          "request": {
+            "url": "https://rest-api-learning-1.onrender.com/bats",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Get by brand",
+          "filename": "Get by brand.bru",
+          "seq": 3,
+          "request": {
+            "url": "https://rest-api-learning-1.onrender.com/bats",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Get bat by Style",
+          "filename": "Get bat by Style.bru",
+          "seq": 4,
+          "request": {
+            "url": "https://rest-api-learning-1.onrender.com/bats/brand/SS",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Search bats by keyword",
+          "filename": "Search bats by keyword.bru",
+          "seq": 5,
+          "request": {
+            "url": "style/Pro",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Get affordable bat",
+          "filename": "Get affordable bat.bru",
+          "seq": 6,
+          "request": {
+            "url": "https://rest-api-learning-1.onrender.com/bats/search?keyword=GM",
+            "method": "GET",
+            "headers": [],
+            "params": [
+              {
+                "name": "keyword",
+                "value": "GM",
+                "type": "query",
+                "enabled": true
+              }
+            ],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Delete Bat",
+          "filename": "Delete Bat.bru",
+          "seq": 7,
+          "request": {
+            "url": "affordable?brand=SS&price=7000",
+            "method": "DELETE",
+            "headers": [],
+            "params": [
+              {
+                "name": "brand",
+                "value": "SS",
+                "type": "query",
+                "enabled": true
+              },
+              {
+                "name": "price",
+                "value": "7000",
+                "type": "query",
+                "enabled": true
+              }
+            ],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Update data",
+          "filename": "Update data.bru",
+          "seq": 8,
+          "request": {
+            "url": "https://rest-api-learning-1.onrender.com/bats/{id}",
+            "method": "PUT",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "activeEnvironmentUid": "0DFIPpIdfWwIHv61sglyp",
+  "environments": [
+    {
+      "variables": [
+        {
+          "name": "style",
+          "value": "Pro",
+          "enabled": true,
+          "secret": false,
+          "type": "text"
+        }
+      ],
+      "name": "CricketBat Environment"
+    }
+  ],
+  "brunoConfig": {
+    "version": "1",
+    "name": "CricketBat API",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ],
+    "size": 0,
+    "filesCount": 0
+  }
+}
